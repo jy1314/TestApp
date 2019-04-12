@@ -1,4 +1,4 @@
-package com.bupt.testapp.module;
+package com.bupt.testapp.module.home;
 
 import android.os.Bundle;
 
@@ -16,7 +16,7 @@ import butterknife.BindView;
 public class HomeActivity extends BaseActivity {
 
     @Override
-    protected int getContentViewLayoutID() {
+    protected int getContentViewLayoutID() {//获取界面布局ID
         return R.layout.activity_main;
     }
 

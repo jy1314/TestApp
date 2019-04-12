@@ -1,11 +1,14 @@
 package com.bupt.testapp.Base;
 
 import android.os.Bundle;
+import android.support.annotation.ColorInt;
+import android.support.annotation.IntRange;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.bupt.testapp.R;
+import com.jaeger.library.StatusBarUtil;
 
 import butterknife.ButterKnife;
 import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
@@ -152,6 +155,28 @@ public abstract class BaseActivity extends AppCompatActivity implements BGASwipe
             return;
         }
         mSwipeBackHelper.backward();
+    }
+    public void setStatusBarTransparent() {
+        StatusBarUtil.setTransparent(this);
+    }
+
+    /**
+     * 设置状态栏颜色
+     *
+     * @param color
+     */
+    protected void setStatusBarColor(@ColorInt int color) {
+        setStatusBarColor(color, StatusBarUtil.DEFAULT_STATUS_BAR_ALPHA);
+    }
+
+    /**
+     * 设置状态栏颜色
+     *
+     * @param color
+     * @param statusBarAlpha 透明度
+     */
+    public void setStatusBarColor(@ColorInt int color, @IntRange(from = 0, to = 255) int statusBarAlpha) {
+        StatusBarUtil.setColorForSwipeBack(this, color, statusBarAlpha);
     }
 
 }
