@@ -24,6 +24,10 @@
             android:name=".module.home.HomeActivity"
             android:theme="@style/ViewBigPicTheme">
         </activity>
+        <activity android:name=".module.touchevent.TouchActivity"
+            android:theme="@style/ViewBigPicTheme"/>
+        <activity android:name=".module.network.NetworkActivity" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

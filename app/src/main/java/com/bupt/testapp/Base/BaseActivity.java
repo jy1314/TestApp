@@ -6,6 +6,7 @@ import android.support.annotation.IntRange;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 
 import com.bupt.testapp.R;
 import com.jaeger.library.StatusBarUtil;
@@ -178,5 +179,6 @@ public abstract class BaseActivity extends AppCompatActivity implements BGASwipe
     public void setStatusBarColor(@ColorInt int color, @IntRange(from = 0, to = 255) int statusBarAlpha) {
         StatusBarUtil.setColorForSwipeBack(this, color, statusBarAlpha);
     }
+
 
 }
