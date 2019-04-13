@@ -16,6 +16,11 @@ public class WeatherEntry {
         this.weatherinfo = weatherinfo;
     }
 
+    @Override
+    public String toString() {
+        return weatherinfo.toString();
+    }
+
     public static class WeatherinfoBean {
         /**
          * city : 北京
