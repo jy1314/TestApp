@@ -21,6 +21,7 @@ import butterknife.OnClick;
 
 public class HomeActivity extends BaseActivity {
 
+
     @BindView(R.id.but_1)
     Button but_to_touchActivity;
     @BindView(R.id.but_2)

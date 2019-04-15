@@ -1,5 +1,9 @@
 package com.bupt.testapp.entry;
-
+/*
+* @author Jerry
+* create at 2019/4/14 下午11:33
+* description:天气类实体，解析天气信息
+*/
 public class WeatherEntry {
 
     /**
