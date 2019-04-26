@@ -1,22 +1,16 @@
-package com.bupt.testapp.module.network;
+package com.bupt.testapp.module.weather;
 
 import com.bupt.testapp.entry.WeatherEntry;
 
 import java.util.List;
 
-/*
-* @author Jerry
-* create at 2019/4/14 下午11:40
-* description:
-*/
-public interface NetWorkContract {
-
+public interface WeatherContract {
     interface View{
         /**
          * presenter获取数据后调用此方法将数据展示到界面上
-         * @param weatherEntry 获取到的天气数据
+         * @param weatherEntities 获取到的天气数据
          */
-        ca(WeatherEntry weatherEntry);
+        void setData(List<WeatherEntry> weatherEntities);
 
         /**
          * presenter获取数据失败调用此方法将错误信息展示到界面上
@@ -31,4 +25,5 @@ public interface NetWorkContract {
          */
         void getData(String[] cities);
     }
+
 }
